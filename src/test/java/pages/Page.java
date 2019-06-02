@@ -51,6 +51,8 @@ public class Page {
         getWait().until(driver -> element.getText().length() > 0);
     }
 
+
+
     public void forActionMove(WebElement element) {
         new Actions(getDriver()).moveToElement(element).perform();
     }
@@ -58,6 +60,12 @@ public class Page {
     public void forSelectByValue(WebElement element, String valueOption) {
         new Select(element).selectByValue(valueOption);
     }
+
+    public void forSelectByText(WebElement element, String textOption) {
+        new Select(element).selectByVisibleText(textOption);
+    }
+
+
 
 
 }

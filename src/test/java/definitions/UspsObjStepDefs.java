@@ -9,16 +9,16 @@ import pages.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UspsObjStepDefs {
-    @Given("^I open \"([^\"]*)\" page$")
-    public void iOpenPage(String page) throws Throwable {
-        switch (page) {
-            case "usps":
-                new UspsHome().open();
-                break;
-            default:
-                throw new RuntimeException("Unrecognized page " + page);
-        }
-    }
+//    @Given("^I open \"([^\"]*)\" page$")
+//    public void iOpenPage(String page) throws Throwable {
+//        switch (page) {
+//            case "usps":
+//                new UspsHome().open();
+//                break;
+//            default:
+//                throw new RuntimeException("Unrecognized page " + page);
+//        }
+//    }
 
     @When("^I go to \"([^\"]*)\"$")
     public void iGoTo(String link) throws Throwable {
