@@ -2,6 +2,7 @@ package definitions;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
+import pages.CalculatorHome;
 import pages.ConverterHome;
 import pages.UspsHome;
 
@@ -14,6 +15,9 @@ public class GoToHomePageStepDefs {
                 break;
             case "converter":
                 new ConverterHome().open();
+                break;
+            case "calculator":
+                new CalculatorHome().open();
                 break;
             default:
                 throw new RuntimeException("Unrecognized page " + page);

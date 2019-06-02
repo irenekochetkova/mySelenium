@@ -27,5 +27,4 @@ public class ConverterObjStepDefs {
         assertThat(result.getFieldTo()).contains(to);
     }
 
-
 }
