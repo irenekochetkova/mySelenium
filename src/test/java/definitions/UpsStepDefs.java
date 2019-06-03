@@ -68,7 +68,7 @@ public class UpsStepDefs {
         } else {
             getExecutor().executeScript("arguments[0].click();", getDriver().findElement(By.xpath("//button[@id='nbsBackForwardNavigationContinueButton']")));
         }
-        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.not(ExpectedConditions.urlToBe(oldUrl)));
+       new WebDriverWait(getDriver(), 10).until(ExpectedConditions.not(ExpectedConditions.urlToBe(oldUrl)));
 
         // My code
 //        if (getDriver().findElements(By.xpath("//button[@id='nbsBackForwardNavigationContinueButton']")).size() > 0) {
