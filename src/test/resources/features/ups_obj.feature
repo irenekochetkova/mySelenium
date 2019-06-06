@@ -14,12 +14,12 @@ Feature: UPS Scenarios  in page object
     When I submit the shipment form of the page
     And I set packaging type on the page
     Then I verify total charges changed on the page
-#    When I submit the shipment form
-#    And I select cheapest delivery option
-#    And I submit the shipment form
-#    And I set Saturday Delivery type
-#    Then I verify total charges changed
-#    When I submit the shipment form
+    When I submit the shipment form of the page
+    And I select cheapest delivery option on the page
+    And I submit the shipment form of the page
+    And I set Saturday Delivery type of the page
+    Then I verify total charges changed on the page
+    When I submit the shipment form of the page
 #    And I select Paypal payment type
 #    And I submit the shipment form
 #    Then I review all recorded details on the review page

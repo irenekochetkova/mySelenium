@@ -4,10 +4,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.UpsDestinationShipment;
-import pages.UpsHome;
-import pages.UpsOriginShipment;
-import pages.UpsPackaging;
+import pages.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -53,6 +50,7 @@ public class UpsObjStepDefs {
         assertThat(actualResult).contains(result.verifyResultOrigin("zip"));
         assertThat(actualResult).contains(result.verifyResultOrigin("email"));
         assertThat(actualResult).contains(result.verifyResultOrigin("phone"));
+        Thread.sleep(1000);
     }
 
     @When("^I fill out destination shipment fields on the page$")
@@ -77,7 +75,16 @@ public class UpsObjStepDefs {
 
     @Then("^I verify total charges changed on the page$")
     public void iVerifyTotalChargesChangedOnThePage() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        new UpsPackaging().verifyChangesOfTotal();
+    }
+
+    @And("^I select cheapest delivery option on the page$")
+    public void iSelectCheapestDeliveryOptionOnThePage() throws Throwable {
+        new UpsOptionDelivery().getCheapestElement();
+    }
+
+    @And("^I set Saturday Delivery type of the page$")
+    public void iSetSaturdayDeliveryTypeOfThePage() throws Throwable {
+        new UpsDetailaOptionDelivery().setDay();
     }
 }

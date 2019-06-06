@@ -70,8 +70,9 @@ public class UpsOriginShipment extends Page {
         phoneOrigin.sendKeys(getSender().get("phone"));
     }
 
-    public void getCurrentUrl(String keyWord) {
+    public void getCurrentUrl(String keyWord) throws InterruptedException {
         if (getDriver().getCurrentUrl().contains(keyWord)) {
+            Thread.sleep(1000);
             click(buttonPayment);
         } else {
             click(buttonContinue);
